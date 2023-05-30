@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enviar Mensagens</title>
+</head>
+<body>
+  <h1>Enviar Mensagens</h1>
+
+  <form id="enviarMensagensForm">
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
+
+    <label for="numeros">Números de Telefone (separados por vírgula):</label><br>
+    <textarea id="numeros" name="numeros" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Enviar Mensagens">
+  </form>
+
+  <script>
+    document.getElementById('enviarMensagensForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita o envio padrão do formulário
+
+      const mensagem = document.getElementById('mensagem').value;
+      const numeros = document.getElementById('numeros').value.split(',');
+
+      enviarMensagens(mensagem, numeros);
+    });
+
+    function enviarMensagens(mensagem, numeros) {
+      // Chame a função do Venom ou outra biblioteca para enviar as mensagens
+      // Você precisará adaptar esta função de acordo com a biblioteca que estiver usando
+
+      console.log('Mensagem:', mensagem);
+      console.log('Números:', numeros);
+      // Aqui você pode adicionar a lógica para enviar as mensagens usando a biblioteca Venom ou outra biblioteca de sua escolha
+    }
+  </script>
+</body>
+</html>
